@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="_Katman.css">
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+
+
+    <link rel="alternate" hreflang="en" href="_Katman.html" />
+    <link rel="alternate" hreflang="tr" href="katmanturkish.html" />
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="langWrap">
+
+
+        </div>
+    </div>
+
+    <ul>
+
+
+        <div class="actt">
+            <a class="active hp" href="_Katman.html"><i></i><img src="logo1.png" width="170px" height="33px"></a>
+        </div>
+        <li class="act">
+
+
+            <a class="active ha" href="_KatmanHakkimizda.html"><i></i>About Us</a>
+
+            <a class="active hp" href="katmanturkish.html"" language='turkish' class=" active">TR</a>
+
+        </li>
+
+
+
+        <li class="dropdown">
+
+
+
+            <a class="active ur" href="_Katman2.html"><i></i>Our Products</a>
+            <div class="dropdown-content">
+
+
+                <a class="yaz" href="_Yazicilar.html">Printers</a>
+                <a class="el" href="_Elektronik.html">Electronic</a>
+
+
+
+
+            </div>
+
+        </li>
+
+
+    </ul>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Yazicilar.html#katmanci">
+                <img src="katmanc1_.png" style="width:60%">
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Elektronik.html#katmanKontrol32">
+                <img src="KatmanKontrol32kopya.png" style="width:60%">
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Yazicilar.html#katmanK1">
+                <img src="k1-1.png" style="width:50%">
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Elektronik.html#katmanKontrol8">
+                <img src="KatmanKontrol8kopya.png" style="width:60%">
+            </a>
+        </div>
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Yazicilar.html#katmanS133">
+                <img src="Katmans133.PNG" style="width:60%">
+            </a>
+        </div>
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Elektronik.html#katmanSWC">
+                <img src="swc11.png" style="width:60%">
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <a class="slide-a" href="_Elektronik.html#katmanLCD">
+                <img src="lcd.png" style="width:60%">
+            </a>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <style>
+        body {
+
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+
+</body>
+
+</html>

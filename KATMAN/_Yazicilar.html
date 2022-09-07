@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KATMAN</title>
+    <link class="yaz" rel="stylesheet" href="_Yazicilar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="alternate" hreflang="en" href="_Yazicilar.html" />
+    <link rel="alternate" hreflang="tr" href="yazicilarturkish.html" />
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="langWrap">
+
+
+        </div>
+    </div>
+
+    <ul>
+
+        <div class="actt">
+            <a class="active hp" href="_Katman.html"><i></i><img src="logo1.png" width="170px" height="33px"></a>
+        </div>
+
+        <li class="act">
+
+            <a class="active ha" href="_KatmanHakkimizda.html"><i></i>About Us</a>
+            <a class="active hp" href="yazicilarturkish.html"" language='turkish' class=" active">TR</a>
+
+
+        <li class="dropdown">
+
+            <a class="active ur" href="_Katman2.html"><i></i>Our Products</a>
+            <div class="dropdown-content">
+
+
+                <a class="title" href="_Yazicilar.html">Printers</a>
+                <a class="el" href="_Elektronik.html">Electronic</a>
+
+
+            </div>
+        </li>
+
+
+    </ul>
+
+    <div class="title1">
+        <h1 class="title">Printers</h1>
+    </div>
+    <div id="katmanK1" class="content1">
+        <img src="urun1.png" alt="urun1">
+        <div class="text1">
+            <h3>Katman K1</h3>
+            <p class="description"> - Printing technology:FDM</p>
+            <p class="derele">- Print area: 220*220*200 mm</p>
+            <p class="one">- Extruder type: Direct drive</p>
+            <p class="two">- Controller board: 8 bit</p>
+            <p class="three">- 128x64 graphical screen</p>
+            <p class="four">- Filament runout sensor</p>
+            <p class="five">- Automatic bed levelling</p>
+        </div>
+    </div>
+    <div class="frame1">
+        <span></span>
+    </div>
+    <div class="content2">
+
+        <div class="text2">
+            <h3>Katman S-133</h3>
+            <p class="six">- Printing technology:SLA</p>
+            <p class="seven">- Print area: 293*165*400 mm</p>
+            <p class="eight">- Resolution (X,Y): 0.0765 mm</p>
+            <p class="nine">- Resolution (Z): 0.025 mm</p>
+
+
+
+            <p class="ten">- Curing method: UV LED</p>
+            <p class="eleven">- Wavelength: 405nm</p>
+            <p class="twelve">- Color touchscreen</p>
+            <p class="thirteen">- Wifi connection </p>
+            <p class="fourteen">- Power loss recovery</p>
+        </div>
+        <img id="katmanS133" src="urun2.png" alt="urun2" width="600px">
+    </div>
+    <div class="frame2">
+        <span></span>
+    </div>
+
+    <div class="content3">
+
+        <img id="katmanci" src="katmanc1_.png" alt="urun3" width="300px">
+        <div class="text3">
+            <h3>Katman C1-32B</h3>
+            <p class="fifteen">- Printing technology:FDM</p>
+            <p class="sixteen">- Print area: 310*400*400 mm</p>
+            <p class="seventeen">- Extruder type: Direct drive</p>
+            <p class="eighteen">- Controller board: ARM 32 bit</p>
+            <p class="nineteen">- Silent motor drivers</p>
+            <p class="twenty">- Color touchscreen</p>
+            <p class="a">- Wifi Connection</p>
+            <p class="b">- Filament runout sensor</p>
+            <p class="c">- Automatic bed levelling</p>
+            <p class="d">- Power loss recovery</p>
+        </div>
+    </div>
+    <div class="frame1">
+        <span></span>
+    </div>
+    <script>
+        const langEl = document.querySelector('.langWrap');
+        const titleEl = document.querySelector('.title');
+        const descrEl = document.querySelector('.description');
+
+        const derEl = document.querySelector('.derele');
+        const oneEl = document.querySelector('.one');
+        const twoEl = document.querySelector('.two');
+        const threeEl = document.querySelector('.three');
+        const fourEl = document.querySelector('.four');
+        const fiveEl = document.querySelector('.five');
+        const sixEl = document.querySelector('.six');
+        const sevenEl = document.querySelector('.seven');
+        const eightEl = document.querySelector('.eight');
+        const nineEl = document.querySelector('.nine');
+        const tenEl = document.querySelector('.ten ');
+
+        const elevenEl = document.querySelector('.eleven');
+        const twelveEl = document.querySelector('.twelve ');
+        const thirteenEl = document.querySelector('.thirteen ');
+        const fourteenEl = document.querySelector('.fourteen');
+        const fifteenEl = document.querySelector('.fifteen ');
+        const sixteenEl = document.querySelector('.sixteen ');
+        const seventeenEl = document.querySelector('.seventeen ');
+        const eighteenEl = document.querySelector('.eighteen ');
+        const nineteenEl = document.querySelector('.nineteen ');
+        const twentyEl = document.querySelector('.twenty');
+        const aEl = document.querySelector('.a');
+        const bEl = document.querySelector('.b');
+        const cEl = document.querySelector('.c');
+        const dEl = document.querySelector('.d');
+        const urEl = document.querySelector('.ur');
+        const hpEl = document.querySelector('.hp');
+        const haEl = document.querySelector('.ha');
+        const yazEl = document.querySelector('.yaz');
+        const elEl = document.querySelector('.el');
+
+
+        const link = document.querySelectorAll('a');
+
+        link.forEach(el => {
+            el.addEventListener('click', () => {
+                langEl.querySelector('.active').classList.remove('active');
+                el.classList.add('active');
+
+                const attr = el.getAttribute('language');
+
+                titleEl.textContent = data[attr].title;
+                descrEl.textContent = data[attr].description;
+
+                derEl.textContent = data[attr].derele;
+                oneEl.textContent = data[attr].one;
+                twoEl.textContent = data[attr].two;
+                threeEl.textContent = data[attr].three;
+                fourEl.textContent = data[attr].four;
+                fiveEl.textContent = data[attr].five;
+                sixEl.textContent = data[attr].six;
+                sevenEl.textContent = data[attr].seven;
+                eightEl.textContent = data[attr].eight;
+                nineEl.textContent = data[attr].nine;
+
+                tenEl.textContent = data[attr].ten;
+                elevenEl.textContent = data[attr].eleven;
+                twelveEl.textContent = data[attr].twelve;
+                thirteenEl.textContent = data[attr].thirteen;
+                fourteenEl.textContent = data[attr].fourteen;
+                fifteenEl.textContent = data[attr].fifteen;
+                sixteenEl.textContent = data[attr].sixteen;
+                seventeenEl.textContent = data[attr].seventeen;
+                eighteenEl.textContent = data[attr].eighteen;
+                nineteenEl.textContent = data[attr].nineteen;
+                twentyEl.textContent = data[attr].twenty;
+                aEl.textContent = data[attr].a;
+                bEl.textContent = data[attr].b;
+                cEl.textContent = data[attr].c;
+                dEl.textContent = data[attr].d;
+                haEl.textContent = data[attr].ha;
+                hpEl.textContent = data[attr].hp;
+                yazEl.textContent = data[attr].yaz;
+                elEl.textContent = data[attr].el;
+                urEl.textContent = data[attr].ur;
+
+
+
+
+
+            });
+        });
+
+
+
+        var data = {
+            "english": {
+                "title": "Printers",
+                "description": " - Printing technology:FDM",
+                "derele": "- Print area: 220*220*200 mm",
+                "one": "- Extruder type: Direct drive",
+                "two": "- Controller board: 8 bit",
+                "three": "- 128x64 graphical screen",
+                "four": "- Filament runout sensor",
+                "five": "- Automatic bed levelling",
+                "six": "- Printing technology: SLA",
+                "seven": "- Print area: 293*165*400 mm",
+                "eight": "- Resolution (X, Y): 0.0765 mm",
+                "nine": "- Resolution (Z): 0.025 mm",
+
+                "ten": "- Printing technology: FDM",
+                "eleven": "- Wavelength: 405nm",
+                "twelve": "- Color touchscreen",
+                "thirteen": "- Wifi connection",
+                "fourteen": "- Power loss recovery",
+
+                "fifteen": "- Printing technology: SLA",
+                "sixteen": "- Print area: 310*400*400 mm",
+                "seventeen": "- Extruder type: Direct drive",
+                "eighteen": "- Controller board: ARM 32 bit",
+                "nineteen": "- Silent motor drivers",
+                "twenty": "- Color touchscreen",
+                "a": "- Wifi connection",
+                "b": "- Filament runout sensor",
+                "c": "- Automatic bed levelling",
+                "d": "- Power loss recovery",
+                "ur": "Our Products",
+                "ha": "About Us",
+                "hp": "Home Page",
+                "el": "Electronic",
+
+
+
+            },
+            "turkish": {
+                "title": "Yazıcılar ",
+                "description": "- Baskı teknolojisi: 220*220*200 mm",
+                "derele": "- Baskı alanı:220*220*200 mm",
+                "one": "- Ekstrüder tipi:Doğrudan Sürücü",
+                "two": "- Kontrol kartı: 8 bit",
+                "three": "- 128x64 grafik ekran",
+                "four": "- Filament salgı sensörü",
+                "five": "- Otomatik yatak tesviye",
+                "six": "- Baskı teknolojisi: SLA",
+                "seven": "- Baskı alanı: 293*165*400 mm",
+                "eight": "- Çözünürlük (X, Y): 0,0765 mm",
+                "nine": "- Çözünürlük (Z): 0.025 mm",
+
+                "ten": "- 1",
+                "eleven": "- 3",
+                "twelve": "- 4",
+                "thirteen": "- 5",
+                "fourteen": "- 6",
+                "fifteen": "- 7",
+                "sixteen": "- 8",
+                "seventeen": "- 9",
+                "eighteen": "- 10",
+                "nineteen": "- 11",
+                "twenty": "- 12",
+                "a": "- 13",
+                "b": "- 14",
+                "c": "- 15",
+                "d": "- 16",
+                "ur": "Ürünlerimiz",
+                "ha": "Hakkımızda",
+                "hp": "Ana Sayfa",
+
+                "el": "Elektronik",
+
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
